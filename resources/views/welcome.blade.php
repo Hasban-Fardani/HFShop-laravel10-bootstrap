@@ -31,7 +31,7 @@
         <p class="lead">Tell everyone you're programmer</p>
       </div>
       <div class="bg-body-tertiary mx-auto shadow-sm" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-        <img src="{{ asset('images/product/programmer-meme-tshirt3-ex.jpeg') }}" alt="tshirt" class="bg-body-tertiary mx-auto shadow-sm" style="border-radius: 21px 21px 0 0;">
+        <img src="{{ asset('assets/images/product/programmer-meme-tshirt3-ex.jpeg') }}" alt="tshirt" class="bg-body-tertiary mx-auto shadow-sm" style="border-radius: 21px 21px 0 0;">
       </div>
     </div>
     <div class="bg-body-tertiary me-md-3 pt-md-5 px-md-5 overflow-hidden px-3 pt-3 text-center">
@@ -40,7 +40,7 @@
         <p class="lead">Cool stikers made your laptop like a pro</p>
       </div>
       <div class="bg-dark mx-auto shadow-sm" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-        <img src="{{ asset('images/product/stickers.jpeg') }}" alt="stickers" class="bg-body-tertiary mx-auto shadow-sm" style="border-radius: 21px 21px 0 0;">
+        <img src="{{ asset('assets/images/product/stickers.jpeg') }}" alt="stickers" class="bg-body-tertiary mx-auto shadow-sm" style="border-radius: 21px 21px 0 0;">
       </div>
     </div>
   </div>
@@ -52,7 +52,7 @@
         <p class="lead">And an even wittier subheading.</p>
       </div>
       <div class=" mx-auto shadow-sm" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-        <img src="{{ asset('images/product/headset-ex.jpg') }}" alt="headset" class="bg-body-tertiary mx-auto shadow-sm" style="border-radius: 21px 21px 0 0; max-width: 300px">
+        <img src="{{ asset('assets/images/product/headset-ex.jpg') }}" alt="headset" class="bg-body-tertiary mx-auto shadow-sm" style="border-radius: 21px 21px 0 0; max-width: 300px">
       </div>
     </div>
     <div class="me-md-3 pt-md-5 px-md-5 overflow-hidden px-3 pt-3 text-center">
@@ -61,7 +61,7 @@
         <p class="lead">And an even wittier subheading.</p>
       </div>
       <div class=" mx-auto shadow-sm" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-        <img src="{{asset('images/product/swag-cloud-ex.JPG')}}" alt="" class="bg-body-tertiary mx-auto shadow-sm" style="border-radius: 21px 21px 0 0 ; height:300px;object-fit:cover;max-width: 400px">
+        <img src="{{asset('assets/images/product/swag-cloud-ex.JPG')}}" alt="" class="bg-body-tertiary mx-auto shadow-sm" style="border-radius: 21px 21px 0 0 ; height:300px;object-fit:cover;max-width: 400px">
       </div>
     </div>
   </div>
@@ -69,7 +69,7 @@
 @section("custom_css")
 <style>
   #header {
-    background-image: url('{{ asset("images/product/anythingaboutprogrammer.png") }}');
+    background-image: url('{{ asset("assets/images/product/anythingaboutprogrammer.png") }}');
     object-fit: cover;
     background-size: 100%;
   }

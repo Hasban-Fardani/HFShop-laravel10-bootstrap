@@ -13,16 +13,16 @@
   <!-- Fonts -->
   <link rel="dns-prefetch" href="//fonts.bunny.net">
   <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-  <link rel="shortcut icon" href="{{ asset('images/HF.png') }}" type="image/png">
+  <link rel="shortcut icon" href="{{ asset('assets/images/HF.png') }}" type="image/png">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="{{ asset('bootstrap-5.3.2-dist/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/bootstrap-5.3.2-dist/css/bootstrap.min.css') }}">
 
   <!-- animate css -->
-  <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
+  <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}" />
 
   <!-- custom css -->
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
   <!-- custom css from blade -->
   @yield('custom_css')
@@ -33,7 +33,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark animate_animated animate__fadeIn" id="navbar-app">
       <div class="container">
         <a class="navbar-brand fs-3" href="{{ url('/') }}">
-          <img src="{{ asset('images/HF.png') }}" alt="HF Shop Logo" width="40">
+          <img src="{{ asset('assets/images/HF.png') }}" alt="HF Shop Logo" width="40">
           {{ config('app.name', 'Laravel') }}
         </a>
 
@@ -124,7 +124,7 @@
   </div>
 
   <!-- bootstrap js -->
-  <script src="{{ asset('bootstrap-5.3.2-dist/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('assets/bootstrap-5.3.2-dist/js/bootstrap.min.js') }}"></script>
 
   <!-- custom js -->
   @yield('custom_js')
