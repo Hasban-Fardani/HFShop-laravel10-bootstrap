@@ -18,13 +18,13 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="{{ asset('bootstrap-5.3.2-dist/css/bootstrap.min.css') }}">
 
-  {{-- animate css --}}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- animate css -->
+  <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
 </head>
 
 <body data-bs-theme="dark">
   <div id="app" class="d-flex w-100 h-100 flex-column">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" id="navbar-app">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark animate_animated animate__fadeIn" id="navbar-app">
       <div class="container">
         <a class="navbar-brand fs-3" href="{{ url('/') }}">
           <img src="{{ asset('images/HF.png') }}" alt="HF Shop Logo" width="40">
@@ -95,8 +95,8 @@
       @yield('content')
     </main>
 
-    <div class="container-fluid bg-dark text-body-secondary mt-auto fixed-bottom">
-      <footer class="d-flex justify-content-between align-items-center mt-4 flex-wrap py-3">
+    <div class="container bg-dark text-body-secondary mt-auto fixed-bottom">
+      <footer class="d-flex justify-content-between align-items-center mt-4 flex-wrap px-10 py-2">
         <p class="col-md-4 text-body-secondary mb-0">&copy; 2023 Company, Inc</p>
 
         <a href="/"
@@ -108,8 +108,8 @@
 
         <ul class="nav col-md-4 justify-content-end">
           <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">Dasboard</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">Products</a></li>
           <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">FAQs</a></li>
           <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">About</a></li>
         </ul>

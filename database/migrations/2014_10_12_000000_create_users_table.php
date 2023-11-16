@@ -15,8 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->enum("role", ["admin", "user"]);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->unsignedBigInteger("city_id")->nullable();
+            $table->unsignedBigInteger("address")->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
