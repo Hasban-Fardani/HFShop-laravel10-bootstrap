@@ -20,6 +20,12 @@
 
   <!-- animate css -->
   <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+  <!-- custom css from blade -->
+  @yield('custom_css')
 </head>
 
 <body data-bs-theme="dark">
@@ -91,11 +97,11 @@
       </div>
     </nav>
 
-    <main class="py-4">
+    <main>
       @yield('content')
     </main>
 
-    <div class="container bg-dark text-body-secondary mt-auto fixed-bottom">
+    <div class="container-fluid bg-dark text-body-secondary mt-auto">
       <footer class="d-flex justify-content-between align-items-center mt-4 flex-wrap px-10 py-2">
         <p class="col-md-4 text-body-secondary mb-0">&copy; 2023 Company, Inc</p>
 
@@ -110,15 +116,18 @@
           <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">Home</a></li>
           <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">Dasboard</a></li>
           <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">Products</a></li>
-          <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">FAQs</a></li>
           <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-body-secondary px-2">FAQs</a></li>
         </ul>
       </footer>
     </div>
   </div>
 
-  {{-- bootstrap js --}}
+  <!-- bootstrap js -->
   <script src="{{ asset('bootstrap-5.3.2-dist/js/bootstrap.min.js') }}"></script>
+
+  <!-- custom js -->
+  @yield('custom_js')
 </body>
 
 </html>
