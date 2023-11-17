@@ -185,4 +185,10 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    /*
+      |--------------------------------------------------------------------------
+      | Product Image Path
+      |--------------------------------------------------------------------------
+    */
+    'product_image_path' => '/assets/images/products/',
 ];

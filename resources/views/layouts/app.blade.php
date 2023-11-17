@@ -29,7 +29,7 @@
 </head>
 
 <body data-bs-theme="dark">
-  <div id="app" class="d-flex w-100 h-100 flex-column">
+  <div id="app" class="d-flex  flex-column">
     <nav class="navbar navbar-expand-md navbar-dark bg-dark animate_animated animate__fadeIn" id="navbar-app">
       <div class="container">
         <a class="navbar-brand fs-3" href="{{ url('/') }}">
@@ -45,15 +45,30 @@
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
           <!-- Left Side Of Navbar -->
           <ul class="navbar-nav me-auto">
+            @auth
+              <li class="nav-item">
+                @if (auth()->user()->role == 'admin')
+                <a href="{{ route('admin.dashboard') }}"
+                  class="nav-link {{ Route::currentRouteName() == 'admin.dashboard' ? 'active' : '' }}">Dashboard</a>
+                @else
+
+                <a href="{{ route('user.dashboard') }}"
+                  class="nav-link {{ Route::currentRouteName() == 'user.dashboard' ? 'active' : '' }}">Dashboard</a>
+                @endif
+              </li>
+            @else
+              <li class="nav-item">
+                <a href="{{ route('index') }}"
+                  class="nav-link {{ Route::currentRouteName() == 'index' ? 'active' : '' }}">Home</a>
+              </li>
+            @endauth
             <li class="nav-item">
-              <a href=""
-                class="nav-link {{ Route::currentRouteName() == 'dashboard' ? 'active' : '' }}">Dashboard</a>
+              <a href="{{ route('products') }}"
+                class="nav-link {{ Route::currentRouteName() == 'products' ? 'active' : '' }}">Products</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Products</a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-link">About</a>
+              <a href="{{ route('about') }}"
+                class="nav-link {{ Route::currentRouteName() == 'about' ? 'active' : '' }}">About</a>
             </li>
           </ul>
 
@@ -63,13 +78,15 @@
             @guest
               @if (Route::has('login'))
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                  <a class="nav-link {{ Route::currentRouteName() == 'login' ? 'active' : '' }}"
+                    href="{{ route('login') }}">{{ __('Login') }}</a>
                 </li>
               @endif
 
               @if (Route::has('register'))
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                  <a class="nav-link {{ Route::currentRouteName() == 'register' ? 'active' : '' }}"
+                    href="{{ route('register') }}">{{ __('Register') }}</a>
                 </li>
               @endif
             @else
@@ -80,6 +97,7 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a href="" class="dropdown-item">Profile</a>
                   <a class="dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -122,6 +140,10 @@
       </footer>
     </div>
   </div>
+
+
+  <!-- proper js -->
+  <script src="{{ asset('assets/js/proper.js') }}"></script>
 
   <!-- bootstrap js -->
   <script src="{{ asset('assets/bootstrap-5.3.2-dist/js/bootstrap.min.js') }}"></script>
