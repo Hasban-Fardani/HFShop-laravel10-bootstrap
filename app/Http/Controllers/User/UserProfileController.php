@@ -8,4 +8,8 @@ use Illuminate\Http\Request;
 class UserProfileController extends Controller
 {
     //
+    public function __invoke()
+    {
+        return view('user.profile');
+    }
 }

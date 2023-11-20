@@ -10,11 +10,6 @@ use Illuminate\Http\Request;
 
 class AdminProductController extends Controller
 {
-    // public function __construct() {
-    //     $this->notifications = [];
-    //     $this->messages = [];
-    //     $this->unconfirmed_orders = [];
-    // }
 
     /**
      * Display a listing of the resource.
@@ -42,6 +37,7 @@ class AdminProductController extends Controller
     public function store(Request $request)
     {
         //
+        // $request->
         $file = $request->file('image');
         if (!$file) {
             return redirect()->back()->with('error', 'Please upload an image');
@@ -83,6 +79,7 @@ class AdminProductController extends Controller
     public function show(Product $product)
     {
         //
+        return view('admin.product-detail', compact('product'));
     }
 
     /**

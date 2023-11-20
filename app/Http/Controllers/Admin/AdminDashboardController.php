@@ -9,6 +9,7 @@ class AdminDashboardController extends Controller
 {
     //
     public function __invoke(){
+        $this->middleware("admin");
         $notifications = [];
         $messages = [];
         $uncorfirmed_orders = [];

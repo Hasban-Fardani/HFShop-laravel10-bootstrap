@@ -19,6 +19,10 @@
             Categories
           </a>
           <div class="">
+            <label>
+            <input type="checkbox" name="category" id="category" value="all">
+            All
+            </label>
             @foreach ($categories as $category)
               <label>
                 <input type="checkbox" name="category" id="category" value="{{ $category->id }}">
@@ -69,8 +73,8 @@
               <h5 class="card-title">{{ $product->name }}</h5>
               <p class="card-text">{{ $product->description }}</p>
               <div class="">
-                <a href="#" class="btn btn-primary">Buy</a>
-                <a href="#" class="px-3">@include('icons.cart')</a>
+                <a href="{{route('products.show', $product->id )}}" class="btn btn-primary">Detail</a>
+                {{-- <a href="#" class="px-3">@include('icons.cart')</a> --}}
               </div>
             </div>
           </div>

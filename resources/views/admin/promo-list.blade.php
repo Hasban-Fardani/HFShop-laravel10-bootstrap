@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 
-@section('title', 'Product List')
+@section('title', 'Promo List')
 
 @section('content')
-  <table class="table-bordered table" id="dataTable" width="" cellspacing="0">
+  {{-- <table class="table-bordered table" id="dataTable" width="" cellspacing="0">
     <thead>
       <tr>
         <th>Image</th>
@@ -43,7 +43,7 @@
       </tr>
       @endforeach
     </tbody>
-  </table>
+  </table> --}}
 @endsection
 @section('custom_js')
   <script>

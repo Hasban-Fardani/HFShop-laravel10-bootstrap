@@ -26,7 +26,7 @@
 
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
     <div class="text-bg-dark me-md-3 pt-md-5 px-md-5 overflow-hidden px-3 pt-3 text-center">
-      <a href="#" class="text-decoration-none text-white link-category">
+      <a href="{{route('products', ['category' => 'T-Shirt'])}}" class="text-decoration-none text-white link-category">
         <div class="my-3 py-3">
           <h2 class="display-5">T-Shirt</h2>
           <p class="lead">Tell everyone you're programmer</p>
@@ -38,7 +38,7 @@
       </a>
     </div>
     <div class="bg-body-tertiary me-md-3 pt-md-5 px-md-5 overflow-hidden px-3 pt-3 text-center">
-      <a href="#" class="text-decoration-none text-white link-category">
+      <a href="{{route('products', ['category' => 'Sticker'])}}" class="text-decoration-none text-white link-category">
         <div class="my-3 p-3">
           <h2 class="display-5">Stickers</h2>
           <p class="lead">Cool stikers made your laptop like a pro</p>
@@ -53,7 +53,7 @@
 
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
     <div class="bg-body-tertiary me-md-3 pt-md-5 px-md-5 overflow-hidden px-3 pt-3 text-center">
-      <a href="#" class="text-decoration-none text-white link-category">
+      <a href="{{route('products', ['category' => 'headset'])}}" class="text-decoration-none text-white link-category">
         <div class="my-3 p-3">
           <h2 class="display-5">Headset</h2>
           <p class="lead">And an even wittier subheading.</p>
@@ -65,7 +65,7 @@
       </a>
     </div>
     <div class="me-md-3 pt-md-5 px-md-5 overflow-hidden px-3 pt-3 text-center">
-      <a href="#" class="text-decoration-none text-white link-category">
+      <a href="{{route('products', ['category' => 'other'])}}" class="text-decoration-none text-white link-category">
         <div class="my-3 py-3">
           <h2 class="display-5">Other</h2>
           <p class="lead">And an even wittier subheading.</p>

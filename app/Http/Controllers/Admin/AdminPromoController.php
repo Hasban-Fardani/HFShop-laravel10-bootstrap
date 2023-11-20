@@ -14,12 +14,14 @@ class AdminPromoController extends Controller
     public function index()
     {
         //
+        $promos = Promo::all();
+        return view('admin.promo-list', compact('promos'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
         //
     }

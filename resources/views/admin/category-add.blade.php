@@ -2,7 +2,8 @@
 @section('title', 'Add Category')
 
 @section('content')
-  <form action="{{route('admin.products.store')}}" method="POST">
+  <form action="{{route('admin.categories.store')}}" method="POST">
+  @csrf
     <label for="name" class="label-form">Name</label>
     <input type="text" name="name" id="name" class="form-control">
     <label for="description" class="label-form">Description</label>

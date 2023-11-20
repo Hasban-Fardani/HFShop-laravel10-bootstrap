@@ -2,7 +2,7 @@
 
 @section('title', 'Edit Product')
 @section('back')
-  <a href="{{route('admin.products.index')}}" class="btn btn-primary ml-2">Back</a>  
+  <a href="{{route('admin.products.index')}}" class="btn btn-outline-primary ml-2">Back</a>  
 @endsection
 
 @section('content')
@@ -28,6 +28,9 @@
 
     <label for="price" class="form-label">Price</label>
     <input type="number" name="price" class="form-control" value="{{$product->price}}" required>
+
+    <label for="stock" class="form-label">Stock</label>
+    <input type="number" name="stock" class="form-control" value="{{$product->stock}}" required>
 
     <label for="image" class="form-label">Image</label>
     <br>

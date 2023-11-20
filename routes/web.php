@@ -2,13 +2,17 @@
 
 use App\Http\Controllers\Admin\AdminCategoryController;
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminOrderController;
 use App\Http\Controllers\Admin\AdminProductController;
 use App\Http\Controllers\Admin\AdminPromoController;
 use App\Http\Controllers\HomeProductController;
+use App\Http\Controllers\User\ConfirmOrderController;
 use App\Http\Controllers\User\UserCartController;
 use App\Http\Controllers\User\UserDashboardController;
 use App\Http\Controllers\User\UserOrderController;
+use App\Http\Controllers\User\UserProfileController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +34,7 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/products', [HomeProductController::class, 'index'])->name('products');
-
+Route::get('/products/{product}' , [HomeProductController::class, 'show'])->name('products.show');
 
 Auth::routes();
 
@@ -38,8 +42,11 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', UserDashboardController::class)->name('user.dashboard');
 
+    Route::get('/profile', UserProfileController::class)->name('user.profile');
+    Route::post('/order/confirm/{order}', ConfirmOrderController::class)->name('user.order.confirm');
     Route::name('user')->resource('carts', UserCartController::class)->only(['index', 'show', 'store']);
-    Route::name('user')->resource('orders', UserOrderController::class)->only(['index', 'show', 'store']);
+    Route::name('user')->resource('orders', UserOrderController::class)->only(['index', 'show', 'store', 'create']);
+    
 });
 
 // admin route
@@ -56,6 +63,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
     Route::name('admin')->resource('promos', AdminPromoController::class);
 
     // order 
-
+    Route::name('admin')->resource('orders', AdminOrderController::class);
 });
 

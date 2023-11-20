@@ -25,8 +25,9 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-        Gate::define('order', function(User $user){
-            return $user->address && $user->city;
+        $this->registerPolicies();
+        Gate::define('order', function(User $user, Product $product){
+            return $user->address && $user->city && $user->address && $user->role == 'user' && $product->stock > 0;
         });
 
         Gate::define('admin', function (User $user){
